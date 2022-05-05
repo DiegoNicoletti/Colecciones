@@ -23,28 +23,36 @@ public class ServiceAlumno {
     }
     
     public void CrearAlumnos(){
-        System.out.println("Nombre");
-        String nombreIn = leer.next();
-        String fin=null;
-        
+        Alumnos a1 = new Alumnos();
+        System.out.println("Nombre Alumno");
+        a1.setNombre(leer.next());
         System.out.println("Nota 1");
-        int notaIn1 = leer.nextInt();
+        a1.setNota1(leer.nextInt());
         System.out.println("Nota 2");
-        int notaIn2 = leer.nextInt();
+        a1.setNota2(leer.nextInt());
         System.out.println("Nota 3");
-        int notaIn3 = leer.nextInt();
+        a1.setNota3(leer.nextInt());
         
-        alumno.add(new Alumnos(nombreIn, notaIn1, notaIn2, notaIn3));
+        alumno.add(a1);
+        
     }
     
     public void MostrarTodo(){
         System.out.println("Todos los alumnos, y sus notas son:");
-        for (Alumnos alumnos : alumno) {
-            System.out.println(alumnos.toString());
+        for (Alumnos qwe : alumno) {
+            System.out.println(qwe.toString());
         }
     }
     
     public void NotaFinal(){
+        System.out.println("La nota final de que estudiante quiere calcular?");
+        String nombreAlumno = leer.next();
         
+        for (Alumnos qwe : alumno) {
+            if(qwe.getNombre().equalsIgnoreCase(nombreAlumno)){
+                System.out.println("La nota final de "+nombreAlumno+" es "+qwe.notaFinal());
+            }
+        }
     }
+    
 }

@@ -46,8 +46,13 @@ public class ServicioMascota {
         System.out.println("Cantidad = " + mascotas.size());
     }
 
-//    Crea mascotas, todos chiquitos.
-    public void FabricarChiquitos(int cantidad) {
+    /**
+     * Crea mascotas, todos fer chiquitos beagle.
+     * 
+     * @param cantidad equivale a la cantidad de mascotas a crear y añadir a la lista
+     * 
+     */
+    public void FabricaChiquitos(int cantidad) {
 
         for (int i = 0; i < cantidad; i++) {
 
@@ -56,7 +61,12 @@ public class ServicioMascota {
         }
     }
 
-//    Crea mascotas pidiendo datos por teclado
+    /**
+     * Crea mascotas pidiendo datos por teclado
+     * 
+     * @param cantidad
+     * 
+     */
     public void FabricaMascota(int cantidad) {
         for (int i = 0; i < cantidad; i++) {
             Mascota mascotaCreada = CrearMascota();

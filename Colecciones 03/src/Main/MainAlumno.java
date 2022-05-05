@@ -30,6 +30,7 @@ public class MainAlumno {
             fin = leer.next();
         }
         sa.MostrarTodo();
+        sa.NotaFinal();
     }
     
 }

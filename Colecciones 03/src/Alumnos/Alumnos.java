@@ -11,12 +11,12 @@ package Alumnos;
  */
 public class Alumnos {
     public String nombre;
-    public int nota1, nota2, nota3;
+    public Integer nota1, nota2, nota3;
 
     public Alumnos() {
     }
 
-    public Alumnos(String nombre, int nota1, int nota2, int nota3) {
+    public Alumnos(String nombre, Integer nota1, Integer nota2, Integer nota3) {
         this.nombre = nombre;
         this.nota1 = nota1;
         this.nota2 = nota2;
@@ -31,28 +31,34 @@ public class Alumnos {
         this.nombre = nombre;
     }
 
-    public int getNota1() {
+    public Integer getNota1() {
         return nota1;
     }
 
-    public void setNota1(int nota1) {
+    public void setNota1(Integer nota1) {
         this.nota1 = nota1;
     }
 
-    public int getNota2() {
+    public Integer getNota2() {
         return nota2;
     }
 
-    public void setNota2(int nota2) {
+    public void setNota2(Integer nota2) {
         this.nota2 = nota2;
     }
 
-    public int getNota3() {
+    public Integer getNota3() {
         return nota3;
     }
 
-    public void setNota3(int nota3) {
+    public void setNota3(Integer nota3) {
         this.nota3 = nota3;
+    }
+    
+    public int notaFinal(){
+        int notaFinal;
+        notaFinal = (nota1 + nota2 + nota3)/3;
+        return notaFinal;
     }
 
     @Override
